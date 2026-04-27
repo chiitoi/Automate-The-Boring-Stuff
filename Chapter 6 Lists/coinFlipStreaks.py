@@ -1,3 +1,6 @@
+#Chapter 6 of Automate the Boring Stuff by Al Sweigart
+#https://automatetheboringstuff.com/3e/chapter6.html
+
 import random
 number_of_streaks = 0
 coins = ['H', 'T']
@@ -17,8 +20,6 @@ for experiment_number in range(10000):  # Run 10,000 experiments total.
 
     if streak:
        number_of_streaks += 1
-    #print(coin_flips)
-    #print(len(coin_flips))
-    #print(coin_flips[99])
+
     # Code that checks if there is a streak of 6 heads or tails in a row
 print('Chance of streak: %s%%' % (number_of_streaks / 100))
