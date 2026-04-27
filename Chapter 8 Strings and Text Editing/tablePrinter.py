@@ -1,3 +1,6 @@
+#Chapter 8 of Automate the Boring Stuff by Al Sweigart
+#https://automatetheboringstuff.com/3e/chapter8.html
+
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
