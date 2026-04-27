@@ -1,8 +1,13 @@
+#Chapter 7 of Automate the Boring Stuff by Al Sweigart
+#https://automatetheboringstuff.com/3e/chapter7.html
+
+#Adding an item to the list of inventory list
 def add_to_inventory(inventory, added_items):
     for item in added_items:
         inventory[item] = inventory.get(item, 0) + 1
     return inventory
 
+#displaying all the items that the player has
 def display_inventory(inventory):
     item_list = []
     for item, value in inventory.items():

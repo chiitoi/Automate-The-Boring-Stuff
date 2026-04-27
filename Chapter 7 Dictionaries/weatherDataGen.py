@@ -1,5 +1,9 @@
+#Chapter 7 of Automate the Boring Stuff by Al Sweigart
+#https://automatetheboringstuff.com/3e/chapter7.html
+
 import random, pprint
 
+#Creates weather dictionary using the random module
 def get_random_weather_data():
     weather = {}
     temperature = round(random.uniform(-50, 50), 1)
@@ -9,6 +13,7 @@ def get_random_weather_data():
     weather['pressure'] = random.randint(990, 1010)
     return weather
 
+#Returns the average temp within the list
 def get_average_temperature(weather_data):
     total = 0
     for weather_dict in weather_data:
