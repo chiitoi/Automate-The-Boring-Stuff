@@ -5,12 +5,16 @@ import re
 
 def regex_strip(sentence, characters = ""):
     if not characters:
-        #search full string and only group the middle part of the string
-        #it will always return something
+        #search full string for leading and ending white spaces.
+        #group the middle part of the string and return it.
+        #it will always return something even if the string is empty.
         white_space = re.compile(r"^\s*(.*?)\s*$") 
         contains_spaces = white_space.search(sentence)
         return contains_spaces.group(1)
     else:
+        #re.escape in case the user passes in arguments like . - or ]
+        #adding ^ and $ checks for leading characters and ending characters in the sentence
+        #we sub all that out for an empty characters
         custom_characters = re.compile(rf"^[{re.escape(characters)}]+|[{re.escape(characters)}]+$")
         new_sentence = custom_characters.sub("", sentence)
         return new_sentence
