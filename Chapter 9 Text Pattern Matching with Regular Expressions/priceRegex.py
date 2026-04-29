@@ -4,6 +4,8 @@
 import re
 
 def get_price(sentence):
+    #match the data by first getting the $
+    #then any number of digits follow and then a optional group afterwards so that we can get results like $5 or $5.95
     price_regex = re.compile(r"\$\d+(?:\.\d{2})?")
     return price_regex.findall(sentence)
 

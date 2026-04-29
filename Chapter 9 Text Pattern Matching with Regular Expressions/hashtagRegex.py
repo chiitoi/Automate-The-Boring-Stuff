@@ -3,6 +3,8 @@
 
 import re
 def get_hashtags(sentence):
+    #Remember to #vote on #electionday.
+    #grabs only the #<whatever>
     hashtag_regex = re.compile(r"#\w+")
     return hashtag_regex.findall(sentence)
     

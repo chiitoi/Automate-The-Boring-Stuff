@@ -40,6 +40,8 @@ placeholder = """
 speakers = placeholder.splitlines()
 print(speakers)
 new_list = []
+#split the data by grabbing the name, the space between, and the number
+#replace the string so that we just have {Name},{Number}
 speaker_regex = re.compile(r"\s+(.*)\s(\d+)")
 for item in speakers:
     results = speaker_regex.findall(item)
