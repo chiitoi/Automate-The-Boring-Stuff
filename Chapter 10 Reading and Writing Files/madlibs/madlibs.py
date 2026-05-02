@@ -13,7 +13,7 @@ p = Path.cwd()
 #establish a path to the madlib text file
 madlibs_file_path = p / "madlib.txt"
 
-#create a madlib text file with the follow madlib
+#create a madlib text file with the following madlib if the file doesn't exist
 if not madlibs_file_path.exists():
     with open('madlib.txt', 'w', encoding="UTF-8") as file_obj:
         file_obj.write("The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was unaffected by these events.")
