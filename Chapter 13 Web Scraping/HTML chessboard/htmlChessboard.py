@@ -30,7 +30,7 @@ def write_html_chessboard(board):
             # Loop over all the columns ("files") on the board:
             for board_file in 'abcdefgh':
                 # Start the table data cell element:
-                file_obj.write('    <td style="background: ')
+                file_obj.write('        <td style="background: ')
 
                 # Give it a white or black background:
                 if write_white_square:
