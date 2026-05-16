@@ -29,13 +29,15 @@ def find_in_excel(search_text):
 
                         if search_text in cell_value:   
                             sheet_results.append(cell.coordinate)
-
                             print(f'{file} | {sheet.title} | {cell.coordinate} : {cell.value}')
+
             if sheet_results:
                 file_results.append({
                     "sheet": sheet.title,
                     "cells": sheet_results
                 })
+
+                #old format
                 """
                 results.setdefault(file, [])
                 results[file].append({
@@ -50,6 +52,7 @@ def find_in_excel(search_text):
         wb.close()
     
     print()
+    
     if results:
         pprint.pprint(results, sort_dicts=False)
     else:
