@@ -22,7 +22,7 @@ according to https://www.sqlite.org/pragma.html#pragma_table_info the table_info
     "dflt_value" (the default value for the column);
     "pk" (either zero for columns that are not part of the primary key, or the 1-based index of the column within the primary key).
 
-so the cat table doesn't have a primary key that the vaccination table can use as a foreign key to link them.
+so the cat table doesn't have an open primary key that the vaccination table can use as a foreign key to link them (there is rowid that sqlite adds for each table but IMO it's better to have an explicit primary key).
 This file is an attempt to try and fix it by creating a new table with an INTERGER column and copying over the data
 """
 
